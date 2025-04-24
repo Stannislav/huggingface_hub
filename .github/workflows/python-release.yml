@@ -19,14 +19,12 @@ jobs:
       with:
         python-version: 3.9
     - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install setuptools wheel
+      run: pip install --upgrade pip setuptools wheel
 
     - run: python setup.py sdist bdist_wheel
 
     - run: |
-        pip install twine
+        pip install 
 
     - name: Upload to PyPi
       run: |
